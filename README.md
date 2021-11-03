@@ -29,6 +29,7 @@ Add the hotjar configuration to `themeConfig` in the `docusaurus.config.js` file
     ...
   }
 }
+```
 
 <details>
 <summary>I could use some help...</summary>
