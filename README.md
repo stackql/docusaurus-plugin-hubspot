@@ -25,29 +25,26 @@ yarn add docusaurus-plugin-hubspot
 </p>
 </details>
 
-
-``````
-
 ## Setup
 
-Add to plugins in `docusaurus.config.js`:
+Add to `plugins` in `docusaurus.config.js`:
 
-```
+```js
 {
   plugins: [
-    'docusaurus-plugin-hotjar',
+    'docusaurus-plugin-hubspot',
     ...
   ]
 }
 ```
 
-Add the hotjar configuration to `themeConfig` in the `docusaurus.config.js` file:
+Add your Hubspot configuration to `themeConfig` in the `docusaurus.config.js` file:
 
-```
+```js
 {
   themeConfig: {
-    hotjar: {
-      applicationId: HOTJAR_ID,
+    hubspot: {
+      applicationId: HUBSPOT_ID,
     },
     ...
   }
