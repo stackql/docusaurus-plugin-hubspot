@@ -3,19 +3,19 @@ const path = require('path');
 module.exports = function (context) {
   const {siteConfig} = context;
   const {themeConfig} = siteConfig;
-  const {hotjar} = themeConfig || {};
+  const {hubspot} = themeConfig || {};
 
-  if (!hotjar) {
+  if (!hubspot) {
     throw new Error(
-      `You need to specify 'hotjar' object in 'themeConfig' with 'applicationId' field in it to use docusaurus-plugin-hotjar`,
+      `You need to specify the 'hubspot' object in 'themeConfig' with the 'accountId' field in it to use docusaurus-plugin-hubspot`,
     );
   }
 
-  const {applicationId} = hotjar;
+  const {accountId} = hubspot;
 
-  if (!applicationId) {
+  if (!accountId) {
     throw new Error(
-      'You specified the `hotjar` object in `themeConfig` but the `applicationId` field was missing. ' +
+      'You specified the `hubspot` object in `themeConfig` but the `accountId` field was missing. ' +
         'Please ensure this is not a mistake.',
     );
   }
@@ -23,7 +23,7 @@ module.exports = function (context) {
   const isProd = process.env.NODE_ENV === 'production';
 
   return {
-    name: 'docusaurus-plugin-hotjar',
+    name: 'docusaurus-plugin-hubspot',
 
     injectHtmlTags() {
       if (!isProd) {
@@ -31,17 +31,16 @@ module.exports = function (context) {
       }
       return {
         headTags: [
-          {
-            tagName: 'script',
-            innerHTML: `(function(h,o,t,j,a,r){
-  h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-  h._hjSettings={hjid:${applicationId},hjsv:6};
-  a=o.getElementsByTagName('head')[0];
-  r=o.createElement('script');r.async=1;
-  r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-  a.appendChild(r);
-})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
-          },
+            {
+                tagName: 'script',
+                attributes: {
+                    async: true,
+                    defer: true,
+                    type: 'text/javascript',
+                    id: 'hs-script-loader',
+                    src: `//js.hs-scripts.com/${accountId}.js`,
+                },
+            },
         ],
       };
     },

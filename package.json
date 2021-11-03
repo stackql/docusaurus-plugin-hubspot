@@ -1,7 +1,7 @@
 {
     "name": "docusaurus-plugin-hubspot",
     "version": "1.0.0",
-    "description": "A plugin which adds a Hotjar script to your docusaurus instance.",
+    "description": "A plugin which adds your Hubspot tracking code to your docusaurus docs or blog site.",
     "main": "src/index.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,10 +12,10 @@
     },
     "keywords": [
       "docusaurus",
-      "hotjar",
+      "hubspot",
       "plugin"
     ],
-    "author": "Adam Voliva @ Symbl.ai",
+    "author": "Jeffrey Aven @ InfraQL Technologies",
     "license": "MIT",
     "bugs": {
       "url": "https://github.com/infraql/docusaurus-plugin-hubspot/issues"

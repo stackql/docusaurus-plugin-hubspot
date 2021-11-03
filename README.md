@@ -44,10 +44,12 @@ Add your Hubspot configuration to `themeConfig` in the `docusaurus.config.js` fi
 {
   themeConfig: {
     hubspot: {
-      applicationId: HUBSPOT_ID,
+      accountId: HUBSPOT_ACCOUNT_ID,
     },
     ...
   }
 }
 ```
+
+> 
 
