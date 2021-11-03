@@ -3,7 +3,30 @@
 
 ## Installation
 
-```npm i docusaurus-plugin-hotjar```
+<details>
+<summary>NPM</summary>
+<p>
+
+```bash
+npm i docusaurus-plugin-hubspot
+```
+
+</p>
+</details>
+
+<details>
+<summary>YARN</summary>
+<p>
+
+```bash
+yarn add docusaurus-plugin-hubspot
+```
+
+</p>
+</details>
+
+
+``````
 
 ## Setup
 
@@ -31,19 +54,3 @@ Add the hotjar configuration to `themeConfig` in the `docusaurus.config.js` file
 }
 ```
 
-<details>
-<summary>I could use some help...</summary>
-<p>
-
-```c#
-public class Order
-{
-    public int OrderId { get; set; }
-    public int CustomerId { get; set; }
-
-    public List<int> Products { get; set; }
-}
-\```
-
-</p>
-</details>
