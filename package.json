@@ -1,6 +1,6 @@
 {
     "name": "docusaurus-plugin-hubspot",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A plugin which adds your Hubspot tracking code to your docusaurus docs or blog site.",
     "main": "src/index.js",
     "scripts": {
@@ -8,17 +8,17 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/infraql/docusaurus-plugin-hubspot"
+      "url": "git+https://github.com/stackql/docusaurus-plugin-hubspot"
     },
     "keywords": [
       "docusaurus",
       "hubspot",
       "plugin"
     ],
-    "author": "Jeffrey Aven @ InfraQL Technologies",
+    "author": "Jeffrey Aven @ StackQL Studios",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/infraql/docusaurus-plugin-hubspot/issues"
+      "url": "https://github.com/stackql/docusaurus-plugin-hubspot/issues"
     },
-    "homepage": "https://github.com/infraql/docusaurus-plugin-hubspot#readme"
+    "homepage": "https://github.com/stackql/docusaurus-plugin-hubspot#readme"
   }
