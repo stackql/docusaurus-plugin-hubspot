@@ -45,6 +45,8 @@ Add your Hubspot configuration to `themeConfig` in the `docusaurus.config.js` fi
   themeConfig: {
     hubspot: {
       accountId: HUBSPOT_ACCOUNT_ID,
+      async: boolean, // OPTIONAL: sets the async attribute on the script tag, defaults to false
+      defer: boolean, // OPTIONAL: sets the defer attribute on the script tag, defaults to false     
     },
     ...
   }

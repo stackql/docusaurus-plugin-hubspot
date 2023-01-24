@@ -1,6 +1,6 @@
 {
     "name": "@stackql/docusaurus-plugin-hubspot",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "A plugin which adds your Hubspot tracking code to your docusaurus docs or blog site.",
     "main": "src/index.js",
     "publishConfig": {

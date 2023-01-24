@@ -34,8 +34,8 @@ module.exports = function (context) {
             {
                 tagName: 'script',
                 attributes: {
-                    async: true,
-                    defer: true,
+                    async: hubspot.async || false,
+                    defer: hubspot.defer || false,
                     type: 'text/javascript',
                     id: 'hs-script-loader',
                     src: `//js.hs-scripts.com/${accountId}.js`,
