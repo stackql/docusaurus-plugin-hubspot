@@ -14,7 +14,7 @@ The following script tag is inserted into the head tag
 
 Install the package using your preferred package manager
 
-### NPM
+### npm
 
 ```bash
 npm install --save docusaurus-plugin-hubspot
@@ -25,6 +25,8 @@ npm install --save docusaurus-plugin-hubspot
 ```bash
 yarn add docusaurus-plugin-hubspot
 ```
+
+### pnpm
 
 ```bash
 pnpm add docusaurus-plugin-hubspot
