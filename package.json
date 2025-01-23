@@ -1,27 +1,57 @@
 {
-    "name": "@stackql/docusaurus-plugin-hubspot",
-    "version": "1.1.0",
-    "description": "A plugin which adds your Hubspot tracking code to your docusaurus docs or blog site.",
-    "main": "src/index.js",
-    "publishConfig": {
-      "access": "public"
-    },
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/stackql/docusaurus-plugin-hubspot"
-    },
-    "keywords": [
-      "docusaurus",
-      "hubspot",
-      "plugin"
-    ],
-    "author": "Jeffrey Aven @ StackQL Studios",
-    "license": "MIT",
-    "bugs": {
-      "url": "https://github.com/stackql/docusaurus-plugin-hubspot/issues"
-    },
-    "homepage": "https://github.com/stackql/docusaurus-plugin-hubspot#readme"
+  "name": "@stackql/docusaurus-plugin-hubspot",
+  "version": "1.1.0",
+  "description": "A plugin which adds your Hubspot tracking code to your docusaurus docs or blog site.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "type": "module",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "clean": "rimraf lib",
+    "prebuild": "yarn clean",
+    "build": "tsc --build",
+    "preversion": "npm run build",
+    "postversion": "git push --follow-tags",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stackql/docusaurus-plugin-hubspot"
+  },
+  "keywords": [
+    "docusaurus",
+    "hubspot",
+    "plugin"
+  ],
+  "author": "Jeffrey Aven @ StackQL Studios",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stackql/docusaurus-plugin-hubspot/issues"
+  },
+  "homepage": "https://github.com/stackql/docusaurus-plugin-hubspot#readme",
+  "dependencies": {
+    "@docusaurus/types": "^3.7.0",
+    "@docusaurus/utils-validation": "^3.7.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/jest": "^29.5.14",
+    "eslint": "^9.18.0",
+    "globals": "^15.14.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.21.0"
+  },
+  "peerDependencies": {
+    "@docusaurus/core": "^3.7.0"
   }
+}
