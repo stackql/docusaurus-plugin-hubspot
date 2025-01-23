@@ -6,25 +6,25 @@ import type {
   } from '@docusaurus/types';
 
 export type PluginOptions = {
-    accountId: number,
+    hubId: number,
     async: boolean,
     defer: boolean,
 };
 
 export type Options = {
-    accountId: number,
+    hubId: number,
     async?: boolean,
     defer?: boolean,
   };
 
 export const DEFAULT_OPTIONS: Partial<PluginOptions> = {
-    async: false,
-    defer: false
+    async: true,
+    defer: true
 };
 
 const pluginOptionsSchema = Joi.object<PluginOptions>({
 // We normalize trackingID as a string[]
-accountId: Joi.alternatives()
+hubId: Joi.alternatives()
     .try(
     Joi.alternatives().conditional(Joi.number().required(), {
         then: Joi.custom((val: boolean) => [val]),

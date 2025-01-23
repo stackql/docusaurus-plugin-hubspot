@@ -4,12 +4,24 @@
   "description": "A plugin which adds your Hubspot tracking code to your docusaurus docs or blog site.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "type": "module",
+  "engines": {
+    "node": ">=20.11.0"
+  },
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "lib",
+    "src"
+  ],
   "scripts": {
+    "clean": "rimraf lib",
+    "prebuild": "yarn clean",
     "build": "tsc --build",
-    "watch": "tsc --build --watch"
+    "preversion": "npm run build",
+    "postversion": "git push --follow-tags",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -26,9 +38,20 @@
     "url": "https://github.com/stackql/docusaurus-plugin-hubspot/issues"
   },
   "homepage": "https://github.com/stackql/docusaurus-plugin-hubspot#readme",
-  "devDependencies": {
+  "dependencies": {
     "@docusaurus/types": "^3.7.0",
-    "@docusaurus/utils-validation": "^3.7.0",
-    "typescript": "^5.7.3"
+    "@docusaurus/utils-validation": "^3.7.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/jest": "^29.5.14",
+    "eslint": "^9.18.0",
+    "globals": "^15.14.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.21.0"
+  },
+  "peerDependencies": {
+    "@docusaurus/core": "^3.7.0"
   }
 }

@@ -1,10 +1,10 @@
-import type {LoadContext, Plugin} from '@docusaurus/types';
-import type {PluginOptions} from './options';
+import { LoadContext, Plugin } from '@docusaurus/types';
+import type {PluginOptions} from './options.js';
 
 export function pluginHubspotTackingCode(
   _context: LoadContext,
   options: PluginOptions,
-): Plugin | null {
+): Plugin<never> | null {
   
   if (process.env.NODE_ENV !== 'production') {
     return null;
@@ -27,7 +27,7 @@ export function pluginHubspotTackingCode(
               defer: options.defer,
               type: 'text/javascript',
               id: 'hs-script-loader',
-              src: `//js.hs-scripts.com/${options.accountId}.js`,
+              src: `//js.hs-scripts.com/${options.hubId}.js`,
             },
           }
         ]

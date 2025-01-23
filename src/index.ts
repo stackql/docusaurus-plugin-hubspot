@@ -1,6 +1,6 @@
-import { pluginHubspotTackingCode } from './plugin';
+import { pluginHubspotTackingCode } from './plugin.js';
 
-export type {PluginOptions, Options} from './options';
-export {validateThemeConfig, validateOptions} from './options';
+export type {PluginOptions, Options} from './options.js';
+export {validateThemeConfig, validateOptions} from './options.js';
 
 export default pluginHubspotTackingCode
